@@ -1,0 +1,183 @@
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>消息中心</title>
+	<link rel="stylesheet" type="text/css" href="css/messageCenter.css"/>
+	<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/messageCenter.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="message_wrap">
+	<!--公共部分-->
+	<p class="top_title">消息中心</p>
+	<div class="messControl">
+		<ul>
+			<li><a href="sendMessage.html" class="messControl_active">发送消息</a></li>
+			<li><a href="hasSendMess.html">已发消息</a></li>
+			<li><a href="groupManage.html">分组管理</a></li>
+		</ul>
+	</div>
+	
+<!--发送消息  部分-->
+<div class="sendMess_wrap">
+	<div>
+		<span>消息主题：</span>
+		<input type="text" class="input_theme"/>
+	</div>
+	
+	<div>
+		<span >消息描述：</span>
+		<textarea name="" class="tare-describe"></textarea>
+	</div>
+	
+	<div>
+		<span>消息内容：</span>
+		<textarea name="" class="tare-cont"></textarea>
+	</div>
+	
+	<div>
+		<input type="checkbox" name="" id="" value="" />
+		<span>定时：</span>
+		<input type="text" class="input_time" value=""/>
+		<span class="span_messageTime">消息将在2015-11-20 17：00发送</span>
+	</div>
+	
+	<!--选择用户区域-->
+	<div class="div_selectUser">
+		<span class="span_select">选择用户：</span>
+		<!--左侧：分组-->
+		<div class="grouping">
+			<!--选择用户-查询区域-->
+			<div class="div_search">
+				用户ID：<input type="text" class="userId" placeholder="请输入用户ID"/>
+				用户名：<input type="text" class="username" placeholder="请输入用户名"/>
+				<input type="button" value="查询" class="btn_query"/>
+			</div>
+			
+			<!--用户分组-->
+			<div class="groupControls">
+				<ul class="ul_groupList">
+					<li class="groupActive">全部用户</li>
+					<li>分组1</li>
+					<li>分组2</li>
+					<li>分组3</li>
+					<li>分组4</li>
+				</ul>
+			</div>
+			
+			<!--详细信息-->
+			<div class="groupCont">
+				<div class="user_head">
+					<span class="span_check"><input type="checkbox" name="" id="" value="" /></span>
+					<span class="span_id">用户ID</span>
+					<span class="span_name">用户名称</span>
+					<span class="span_status span_head_status">用户状态
+						<!--鼠标滑过，状态选择-->
+						<div class="div_status">
+							<span>正常</span>
+							<span>屏蔽</span>
+							<span>过期</span>
+							<span>欠费</span>
+						</div>
+					</span>
+				</div>
+				
+				<!--全部用户-->
+				<div  class="user_content">
+					<ul>
+						<li>
+							<span class="span_check"><input type="checkbox" name="" value="4" /></span>
+							<span class="span_id">001</span>
+							<span class="span_name">1111111111@simope.com</span>
+							<span class="span_status">正常</span>	
+						</li>
+						<li>
+							<span class="span_check"><input type="checkbox" name=""  value="1" /></span>
+							<span class="span_id">001</span>
+							<span class="span_name">1111111111@simope.com</span>
+							<span class="span_status">正常</span>	
+						</li><li>
+							<span class="span_check"><input type="checkbox" name="" value="1" /></span>
+							<span class="span_id">001</span>
+							<span class="span_name">1111111111@simope.com</span>
+							<span class="span_status">正常</span>	
+						</li><li>
+							<span class="span_check"><input type="checkbox" name=""  value="1" /></span>
+							<span class="span_id">001</span>
+							<span class="span_name">1111111111@simope.com</span>
+							<span class="span_status">正常</span>	
+						</li>
+						<li>
+							<span class="span_check"><input type="checkbox" name="" value="2" /></span>
+							<span class="span_id">002</span>
+							<span class="span_name">222222222@simope.com</span>
+							<span class="span_status">欠费</span>	
+						</li>
+						<li>
+							<span class="span_check"><input type="checkbox" name="" value="3" /></span>
+							<span class="span_id">003</span>
+							<span class="span_name">23333322222@simope.com</span>
+							<span class="span_status">欠费</span>	
+						</li>
+						<li>
+							<span class="span_check"><input type="checkbox" name=""  value="2" /></span>
+							<span class="span_id">002</span>
+							<span class="span_name">44442@simope.com</span>
+							<span class="span_status">欠费</span>	
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		
+		<!--中间-,向右添加-->
+		<div class="div_choose">
+			<span class="span_right"></span>
+			<span class="span_left"></span>	
+		</div>
+		
+		<!--右侧：已选接收用户-->
+		<div class="userSelected">
+			<div class="div_selected">
+				已选接收用户：
+				<i class="selected_num">7</i>人
+			</div>
+			
+			<div class="user_head">
+				<span class="span_check"><input type="checkbox" name="" id="" value="" /></span>
+				<span class="span_id">用户ID</span>
+				<span class="span_name">用户名称</span>
+				<span class="span_status">用户状态</span>
+			</div>
+				
+			<!--全部用户-->
+			<div class="user_content">
+				<ul>
+					<li>
+						<span class="span_check"><input type="checkbox" name="" value="1" /></span>
+						<span class="span_id">001</span>
+						<span class="span_name">1111111111@simope.com</span>
+						<span class="span_status">正常</span>	
+					</li>
+					<li>
+						<span class="span_check"><input type="checkbox" name="" value="2" /></span>
+						<span class="span_id">002</span>
+						<span class="span_name">222222222@simope.com</span>
+						<span class="span_status">欠费</span>
+					</li>		
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="div_send">
+		<input type="button" id="" value="发送" />
+		<input type="button" id="" value="取消" />
+	</div>	
+</div>	
+
+</div>
+</body>
+</html>
