@@ -1,0 +1,898 @@
+*{padding:0;margin: 0;}
+body{font-family:"Microsoft YaHei","YaHei","微软雅黑","SimHei","黑体";font-size: 14px;background: #F2F2F2;}
+ul li{list-style: none;}
+a{text-decoration: none;color: #333;}
+input,textarea{outline: none;font-size: 14px;font-family: "Microsoft YaHei","YaHei","微软雅黑","SimHei","黑体";}
+button{outline: none;cursor: pointer;}
+.message_wrap{
+	width:1686px;
+	background: #F2F2F2;
+}
+.top_title{
+	font-size: 16px;
+	padding: 16px 20px; 
+	border-bottom: solid 1px #BDBDBD;
+}
+.messControl{
+	padding-top: 14px;
+    padding-bottom: 24px;
+	margin-left: 20px;
+	border-bottom: solid 1px #BDBDBD;
+}
+.messControl ul{
+	width: 410px;
+	padding-left: 15px;
+	padding-right: 15px;
+	background: #FFF;	
+}
+.messControl ul li{
+	float: left;
+}
+.messControl ul li a{
+	display: block;
+	padding: 13px 35px;
+}
+.messControl_active{
+	color: #0099FF;
+}
+.div_search{
+	height: 46px;
+	line-height: 46px;
+}
+.div_search input{
+	width: 150px;
+	width: 144px\9;
+	height: 25px;
+	padding-left: 4px;
+	margin-right: 10px;	
+	border: solid 1px #BDBDBD;
+}
+.div_search .btn_query{
+	width: 60px;
+	height: 25px;
+	padding-right: 4px;
+	margin-right: 0;
+	outline: none;
+	cursor: pointer;
+}
+.span_head_status{
+	cursor: pointer;
+	position: relative;
+}
+/*状态后面小三角*/
+.span_head_status:after{
+	content: "";
+	width: 0;
+    height: 0;
+	display: inline-block;
+	margin-left: 4px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #000;
+}
+.user_content>ul{
+	background: #FFFFFF;
+	height: 100%;
+}
+.user_content>ul>li:nth-child(even){
+	background: #F2F2F2;
+}
+.user_content>ul>li:nth-child(odd){
+	background:#FFF;
+}
+/*--------------------------发送消息--------------------------------*/
+.sendMess_wrap{
+	margin-left: 70px;
+	margin-right: 70px;
+}
+.sendMess_wrap>div{
+	margin-top: 30px;
+}
+.sendMess_wrap>div>span{
+	display: inline-block;
+	vertical-align: top;
+}
+.sendMess_wrap input.input_theme{
+	height: 25px;
+	line-height: 25px;
+}
+.sendMess_wrap input.input_theme,.sendMess_wrap textarea{
+	width:1450px;
+	padding-left: 4px;
+	border: solid 1px #BDBDBD;
+}
+.tare-describe{
+	height: 90px;
+}
+.tare-cont{
+	height: 410px;
+}
+.input_time{
+	margin-left: 11px;
+	margin-right: 5px;
+	padding-left: 4px;
+	height: 25px;
+	line-height: 25px;
+	border: solid 1px #BDBDBD;
+}
+.span_messageTime{
+	vertical-align: middle;
+	color: #FF0000;
+}
+.span_select{
+	display: block;
+	float: left;
+	margin-right: 4px;
+}
+.grouping{
+	width: 791px;
+	float: left;
+	background: #FFFFFF;
+	border: solid 1px #BDBDBD;
+}
+/*选择用户-查询区域*/
+.grouping .div_search{   
+   	width: 591px;
+    height: 46px;
+    line-height: 46px;
+    padding-left: 200px;
+    background: #F2F2F2;
+}
+.div_selectUser .groupControls{
+	width:240px;
+	float: left;
+	height: 687px;
+    overflow: auto;
+}
+.div_selectUser .groupControls .ul_groupList{
+	height: 100%;
+}
+.div_selectUser .groupControls .ul_groupList>li{
+	display: block;
+	padding: 13px 15px;
+	cursor: pointer;
+}
+.div_selectUser .groupControls .ul_groupList>li:last-child{
+	border-bottom: solid 1px #BDBDBD;
+}
+.groupActive{
+	background: #CDCDCD;
+}
+.div_selectUser .groupCont{
+	float: left;
+	width: 550px;
+	border-top: solid 1px #BDBDBD;
+	border-left: solid 1px #BDBDBD;
+}
+.div_selectUser .groupCont span,.userSelected span{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	text-align: center;
+}
+/*列表头部分*/
+.div_selectUser .user_head{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: #F2F2F2;
+	border-bottom: solid 1px #BDBDBD;
+}
+/*列表内容*/
+.div_selectUser .user_content{
+	background: #ffffff;
+}
+.div_selectUser .user_content>ul{
+	height: 637px;
+	width: 100%;
+    overflow: auto;
+}
+.div_selectUser .user_content ul li{
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+.div_selectUser .user_content .span_check,.user_head .span_check{
+	width:75px;
+	margin-top: 4px;
+}
+.div_selectUser .user_content .span_id,
+.div_selectUser .user_head .span_id{
+	width:85px;
+}
+.div_selectUser .user_content .span_name,
+.div_selectUser .user_head .span_name{
+	width: 240px;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.div_selectUser .user_content .span_status,
+.div_selectUser .user_head .span_status{
+	width: 112px;
+}
+/*鼠标滑过，状态选择*/
+.div_status{
+	width: 73px;
+	position: absolute;
+	left: 18px;
+	text-align: center;
+	background: #FFF;
+	z-index: 11;
+	border: solid 1px #777777;
+	display: none;
+}
+.div_status>span{
+	width: 100%;
+	padding-top:3px ;
+	padding-bottom: 3px;
+	cursor: pointer;
+}
+.div_status>span:hover{
+	background: #E4E4E4;
+}
+/*中间选择*/
+.div_choose{
+	float: left;
+	width: 105px;
+	height: 737px;
+}
+.div_choose>span{
+	display: block;
+	width: 105px;
+	height: 50px;
+	cursor: pointer;
+}
+.span_right{
+	background: url(../images/right.png) center center no-repeat;
+	background-size: 20px;
+	margin-top: 280px;
+}
+.span_left{
+	background: url(../images/left.png) center center no-repeat;
+	background-size: 20px;
+	margin-top:30px;
+}
+/*已选接受用户*/
+.userSelected{
+	float: left;
+	width: 550px;
+	border: solid 1px #BDBDBD;
+}
+.div_selected{
+	height: 46px;
+	line-height: 46px;
+	padding-left: 13px;
+	border-bottom: solid 1px #BDBDBD;
+}
+.selected_num{
+	font-style: normal;
+	color: #FF090B;
+}
+/*发送取消*/
+.div_send{
+	padding-top:40px ;
+	padding-bottom: 215px;
+	margin-left: 74px;
+	border-top: dashed 1px #BDBDBD;
+	clear: both;
+}
+.div_send>input{
+	width:100px;
+	height: 25px;
+	line-height: 23px;
+	text-align: center;
+	margin-right: 40px;
+	cursor: pointer;
+	outline: none;
+	border: solid 1px #BDBDBD;
+}
+
+/*--------------------------已发消息--------------------------------*/
+.hasSend_wrap{
+	margin-left: 20px;
+	position: relative;
+}
+/*删除查询*/
+.hasSend_wrap>.div_search{
+	padding: 7px;
+}
+.hasSend_wrap>.div_search>.btn_del{
+	width: 64px;
+	height: 28px;
+	line-height: 28px;
+	background: #FFF;
+	border: solid 1px #AEAEAE;
+	margin-left: 30px;
+}
+.hasSend_wrap>.div_search input.input_mess{
+	width:195px;
+	margin-left: 1274px;
+}
+.hasSend_head{
+	background: #FFF;
+	padding-top: 11px;
+	padding-bottom: 11px;
+}
+.hasSend_head span,.hasSend_cont span{
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+.hasSend_head>span>i{
+	font-style: normal;
+	padding-right: 9px;
+}
+.hasSend_head>span.span_head_check,
+.hasSend_cont span.span_check{
+	width: 58px;
+	padding-left: 23px;
+	margin-top: 3px;
+	cursor: default;
+}
+.hasSend_cont span.span_check input{
+	height: 16px;
+}
+.hasSend_head>span.span_head_theme{
+	width: 825px;
+}
+.hasSend_head>.span_head_sendtime{
+	width: 385px;
+}
+.hasSend_head>.span_head_status{
+	width: 360px;
+	position: relative;
+}
+.hasSend_head>.span_head_status>.div_status{
+	left: 3px;
+}
+.hasSend_cont .span_theme{
+	width: 800px;
+	padding-left: 10px;
+	padding-right: 20px;
+	overflow: hidden;
+}
+.hasSend_cont .span_sendtime{
+	width: 375px;
+	padding-left: 5px;
+}
+.hasSend_cont .span_status{
+	width: 340px;
+	padding-left: 13px;
+}
+.hasSend_cont .span_theme>i{
+	font-style: normal;
+}
+.hasSend_cont .span_theme>i.i_describe{
+	color: #999;
+}
+.hasSend_cont>ul>li{
+	list-style: none;
+	padding-bottom:10px ;
+	padding-top: 10px;
+}
+.hasSend_cont>ul>li:nth-child(odd){
+	background: #F2F2F2;
+}
+.hasSend_cont>ul>li:nth-child(even){
+	background: #FFF;
+}
+.hasSend_cont>ul>li>span{
+	cursor: pointer;
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+}
+.hasSend_cont>ul>li>span:first-child{
+	cursor: default;
+}
+/*定时*/
+.i_timing{
+	font-style: normal;
+	color: #FF0000;
+}
+/*删除*/
+.div_remove{
+	width: 410px;
+    height: 270px;
+    background: #FFF;
+    border: solid 1px #CCCCCC;
+    position: absolute;
+    top: 100px;
+	left: 50%;
+    margin-left: -205px;
+    display: none; 
+}
+.div_remove>p>button{
+	height: 30px;
+    width: 80px;
+    margin-right: 18px;
+    border: solid 1px #797979;
+    background: #FFF;
+    text-align: center;
+}
+/*底部翻页*/
+.div_page{
+	margin-top: 15px;
+	margin-bottom: 33px;
+	margin-right: 12px;
+	float: right;
+}
+
+/*--------------------------详细信息--------------------------------*/
+.messDetail_wrap{
+	margin-left: 20px;
+	position: relative;
+}
+.div_operate{
+	padding-top: 14px;
+	padding-bottom: 19px;
+}
+.div_operate>input{
+	height: 25px;
+	line-height: 25px;
+	width: 60px;
+    background: #DDD;
+    border: solid 1px #AEAEAE;
+    cursor: pointer;
+}
+.span_line{
+	padding: 0 10px;
+}
+.messInfo{
+	padding-left: 36px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #FFF;
+}
+.messInfo>p{
+	line-height: 28px;
+}
+.messInfo>p:first-child{
+	font-weight: bold;
+}
+.messInfo>p>.a_viewRecipient{
+	color: #3300FF;
+}
+.messCont{
+	min-height: 650px;
+	margin-top: 23px;
+	padding: 20px 24px;
+	background: #FFF;
+	line-height: 26px;
+}
+/*接收人*/
+.messRecipient{
+	width:866px;
+	height: 650px;
+	background: #FFF;
+	border: solid 1px #BDBDBD;
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    margin-left: -433px;
+    margin-top: -325px;
+    display: none;
+}
+.messRecipient>p{
+	height: 35px;
+	line-height: 35px;
+	padding-left: 13px;
+	background: #F2F2F2;
+	border-bottom: solid 1px #BDBDBD;
+	position: relative;
+}
+.span_close{
+	display: block;
+	height: 25px;
+    width: 25px;
+    cursor: pointer;
+	position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.span_close img{
+	width: 100%;
+}
+.div_recipient{
+	height: 46px;
+	line-height: 46px;
+}
+.recipientNum{
+	float: left;
+	padding-left: 13px;
+}
+.recipientNum>span{
+	color: #FF0000;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+/*选择用户-查询区域*/
+.div_recipient .div_search{
+	float: right;
+	margin-right: 15px;
+	background: none;
+}
+.recipient_cont span{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	text-align: center;
+}
+/*列表头部分*/
+.recipient_cont .user_head{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	background: #F2F2F2;
+}
+/*列表内容*/
+.recipient_cont .user_content{
+	height: 520px;
+	overflow: auto;
+	background: #FFFFFF;
+}
+.recipient_cont .user_content ul li{
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+.recipient_cont .span_id{
+	width:160px;
+}
+.recipient_cont .span_name{
+	width: 320px;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.recipient_cont .span_status{
+	width: 190px;
+}
+.recipient_cont .span_read{
+	width: 157px;
+}
+.recipient_cont .span_noread{
+	color: #FF0000;
+}
+/*--------------------------分组管理--------------------------------*/
+/*分组管理部分*/
+.groupMana_wrap{
+	margin-left: 20px;
+	margin-top: 20px;
+}
+/*左侧*/
+.groupMana_left{
+	float: left;
+	width:230px;
+	margin-right: 25px;
+}
+/*新建分组、编辑按钮*/
+.div_btn_left{
+	margin-top: 18px;
+	margin-bottom: 24px;
+	overflow: hidden;
+}
+.div_btn_right{
+	margin-top: 14px;
+	margin-bottom: 10px;
+}
+.groupMana_wrap button{
+    height: 30px;
+    line-height: 28px;
+    width: 80px;
+    margin-right: 14px;
+    border: solid 1px #797979;
+    background: #FFF;
+    text-align:center;
+}
+.groupMana_wrap .btn_new{
+	 float: left;
+}
+.groupMana_wrap button.btn_edit{
+	width: 50px;
+	float: right;
+	margin-right:0;
+}
+/*左下：分组信息*/
+.groupMana_wrap .groupControls{
+	height: 635px;
+    background: #FFF;
+    border: solid 1px #BDBDBD;
+    overflow: auto;
+}
+.groupMana_wrap .groupControls ul.ul_groupList li{
+	display: block;
+	padding: 13px 15px;
+	text-align: center;
+	border-bottom: solid 1px #BDBDBD;
+	cursor: pointer;
+}
+/*编辑*/
+.groupControls ul li span.span_modify{
+    cursor: pointer;
+    float: left;
+    font-size: 14px;
+    padding-top: 6px;
+    color: #0099FF;
+}
+.groupControls ul li span.span_modify>i{
+	font-style: normal;
+	display: block;
+	padding-top: 5px;
+}
+.ul_groupList_edit{
+	display: none;
+}
+.ul_groupList_edit li{
+	list-style: none;
+	display: block;
+	padding: 10px;
+	border-bottom: solid 1px #BDBDBD;
+}
+.ul_groupList_edit li input[type=checkbox]{
+	width: 30px;
+	display: block;
+    margin-top: 8px;
+    float: left;
+}
+.ul_groupList_edit li input.input_groupName{
+	display: block;
+	width: 120px;
+	width: 110px\9;
+	float: left;
+	padding: 4px;
+	margin-right: 5px;
+	border: solid 1px #FFFFFF;
+}
+.ul_groupList_edit li:last-child{
+	border-bottom: none;
+	padding-top: 15px;
+}
+.ul_groupList_edit li:last-child>input[type=checkbox]{
+	margin-top: 9px;
+	margin-right: 4px;
+}
+.ul_groupList_edit button.btn_delGroup{
+	float: right;
+	margin-right: 0;
+}
+.span_modify{
+	display: none;
+}
+/*新建分组*/
+.div_newgroup{
+	display: none;
+}
+.div_newgroup>p{
+	text-align: center;
+	padding: 8px;
+}
+.div_newgroup>p:first-child{
+	border-bottom: solid 1px #BDBDBD;
+}
+.div_newgroup>p>input[type=text]{
+	width: 120px;
+	height: 30px;
+	line-height: 30px;
+	padding-left: 4px;	
+}
+.div_newgroup>p>input[type=button]{
+	width: 40px;
+	height: 25px;
+	cursor: pointer;
+    border: solid 1px #BDBDBD;
+    background: #DDDDDD;
+}
+/*右侧*/
+.groupMana_right{
+	width: 1406px;
+	float: left;
+	position: relative;
+}
+/*选择用户-查询区域*/
+.groupMana_right .div_search{
+	padding-left: 880px;
+	border-bottom: solid 1px #BDBDBD;
+}
+.groupMana_right .groupCont{
+	border: solid 1px #BDBDBD;
+}
+.groupMana_right .groupCont span,.groupMana_right .userSelected span{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	text-align: center;
+}
+/*列表头部分*/
+.groupMana_right .user_head{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: #F2F2F2;
+}
+/*列表内容*/
+.groupMana_right .user_content{
+	height: 555px;
+    overflow: auto;
+    background: #FFFFFF;
+}
+.groupMana_right .user_content ul li{
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+.groupMana_right .span_check{
+	width:140px;
+	margin-top: 3px;
+}
+.groupMana_right .span_id{
+	width:160px;
+}
+.groupMana_right .span_name{
+	width: 650px;
+    overflow: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.groupMana_right .span_status{
+	width: 175px;
+}
+.groupMana_right>.groupCont>.user_head>span.span_head_status>.div_status{
+	left:50px;
+}
+.groupMana_right .span_head_status:after{
+	content: "";
+	width: 0;
+    height: 0;
+	display: inline-block;
+	margin-left: 4px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 8px solid #000;
+}
+/*添加用户*/
+.div_add{
+	width: 658px;
+    border: solid 1px #BDBDBD;
+    background: #FFF;
+    display: none;
+}
+.div_add>.div_add_search {
+	padding-left: 110px;
+}
+ .div_add>.div_search {
+	border-bottom: solid 1px #BDBDBD;
+}
+ .div_add .user_head {
+ 	height: 23px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: #F2F2F2;
+}
+.div_add span{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	text-align: center;
+}
+.div_add>p:first-child{
+	background: #CDCDCD;
+	position: relative;
+	line-height: 35px;
+	padding-left: 13px;
+}
+.groupMana_right .div_add_search{
+	padding-left: 110px;
+}
+.div_add .groupCont{
+	border: none;
+	border-bottom: solid 1px #BDBDBD;
+}
+.div_add .span_check{
+	width:80px;
+}
+.div_add .span_check input{
+	margin-top: 3px;
+}
+.div_add .span_id{
+	width:80px;
+}
+.div_add .span_name{
+	width:260px;
+}
+.div_add .span_status{
+	width:170px;
+}
+.div_add .span_head_status>.div_status{
+	left: 55px;
+}
+.div_add .user_content{
+    height: 507px;
+    overflow: auto;
+    background: #FFFFFF;
+}
+ .div_add .user_content ul li {
+	list-style: none;
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+.div_add .user_content>ul>li:nth-child(odd){
+	background: #FFFFFF;
+}
+.div_add .user_content>ul>li:nth-child(even){
+	background: #F2F2F2;
+}
+.div_add button{
+	background: #F2F2F2;
+	 height: 30px;
+	line-height: 28px;
+	width: 80px;
+	margin-right: 14px;
+	border: solid 1px #797979;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.div_add .btn_ok{
+	margin-left: 420px;
+}
+/*移出弹出框*/
+/*删除弹出框*/
+.div_out,.div_deleteGroup{
+	width:410px;
+	height: 230px;
+	background: #FFF;
+	border: solid 1px #CCCCCC;
+	position: absolute;
+    top: 130px;
+    left:50%;
+    margin-left: -205px;
+	display: none;
+}
+.div_out>p:first-child,.div_remove>p:first-child,.div_deleteGroup>p:first-child{
+	height:35px;
+	background: #D7D7D7;
+	position: relative;
+}
+.div_out>p.p_confirm,.div_remove>p.p_confirm,.div_deleteGroup>p.p_confirm{
+	text-align: center;
+	margin: 20px;
+	padding-top: 38px;
+	padding-bottom: 55px;
+	border-bottom: solid 1px #A1A1A1;
+}
+.div_out>p:last-child,.div_remove>p:last-child,.div_deleteGroup>p:last-child{
+	padding-left: 115px;
+}
+.div_out>p>button,.div_remove>p>button,.div_deleteGroup>p>button{
+	background: #F2F2F2;
+}
+/*清除浮动*/
+ul:before,ul:after,
+ul>li:before,ul>li:after,
+.message_wrap:before,.message_wrap:after,
+.messControl:before,.messControl:after,
+.sendMess_wrap>div:before,.sendMess_wrap>div:after,
+.user_head:before,.user_head:after,
+.user_content:before,.user_content:after,
+.hasSend_head:before,.hasSend_head:after,
+.recipientList:before,.recipientList:after,
+.div_recipient:before,.div_recipient:after,
+.groupMana_wrap:before,.groupMana_wrap:after,
+.div_btn_left:before,.div_btn_left:after,
+.div_btn_right:before,.div_btn_right:after,
+.div_search:before,.div_search:after{
+	content: "";
+	display: table;
+}
+ul:after,
+ul>li:after,
+.message_wrap:after,
+.messControl:after,
+.sendMess_wrap>div:after,
+.user_head:after,
+.user_content:after,
+.hasSend_head:after,
+.recipientList:after,
+.div_recipient:after,
+.groupMana_wrap:after,
+.div_btn_left:after,
+.div_btn_right:after,
+.div_search:after{
+	clear: both;
+}
