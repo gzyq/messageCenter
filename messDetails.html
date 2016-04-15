@@ -1,0 +1,86 @@
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>详细信息</title>
+	<link rel="stylesheet" type="text/css" href="css/messageCenter.css"/>
+	<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/messageCenter.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+<div class="message_wrap">
+	<p class="top_title">消息中心</p>
+	
+	<!--消息详细信息 区域-->
+	<div class="messDetail_wrap">
+		<div class="div_operate">
+			<input type="button" name="" id="" value="<<返回" />
+			<span class="span_line">|</span>
+			<input type="button" name="" id="" value="删除" />
+		</div>
+		
+		<!--主题、时间、收件人-->
+		<div class="messInfo" >
+			<p>主&nbsp;&nbsp;&nbsp;题：<span>认证邮箱地址成功</span></p>
+			<p>时&nbsp;&nbsp;&nbsp;间：<span>2015年11月2日</span> </p>
+			<p>接收人：<a href="" class="a_viewRecipient">查看</a></p>
+		</div>
+		
+		<!--消息主要内容-->
+		<div class="messCont">
+			尊敬的用户，您于11月2 日18：33分成功认证邮箱地址，如非本人操作，请致电客服热线：4008666618。
+			尊敬的用户，您于11月2 日18：33分成功认证邮箱地址，如非本人操作，请致电客服热线：4008666618。尊敬的用户，您于11月2 日18：33分成功认证邮箱地址，如非本人操作，请致电客服热线：4008666618。尊敬的用户，您于11月2 日18：33分成功认证邮箱地址，如非本人操作，请致电客服热线：4008666618。尊敬的用户，您于11月2 日18：33分成功认证邮箱地址，如非本人操作，请致电客服热线：4008666618。尊敬的用户，您于11月2 日18：33分成功认证邮箱地址，如非本人操作，请致电客服热线：4008666618。尊敬的用户，您于11月2 日18：33分成功认证邮箱地址，如非本人操作，请致电客服热线：4008666618。尊敬的用户，您于11月2 日18：33分成功认证邮箱地址，如非本人操作，请致电客服热线：4008666618。尊敬的用户，您于11月2 日18：33分成功认证邮箱地址，如非本人操作，请致电客服热线：4008666618。
+		</div>
+		
+		<!--点击“查看”，显示接收人-->
+		<div class="messRecipient">
+			<p>接收用户  <span class="span_close"><img src="images/messRecipient_close.png"/></span></p>
+			
+			<div class="recipientList">
+				
+				<div class="div_recipient">
+					<div class="recipientNum">
+						共<span>64</span>人，已读<span>10</span>人
+					</div>
+					<div class="div_search">
+						用户ID：<input type="text" class="userId" placeholder="请输入用户ID"/>
+						用户名：<input type="text" class="username" placeholder="请输入用户名"/>
+						<input type="button" value="查询" class="btn_query"/>
+					</div>
+				</div>
+				
+				<!--接收用户详细信息-->
+				<div class="recipient_cont" >
+					<div class="user_head">
+						<span class="span_id">用户ID</span>
+						<span class="span_name">用户名称</span>
+						<span class="span_status">用户状态</span>
+						<span class="span_read">读取状态</span>
+					</div>
+					
+					<div class="user_content">
+						<ul>
+							<li>
+								<span class="span_id">001</span>
+								<span class="span_name">1111111111@simope.com</span>
+								<span class="span_status">正常</span>	
+								<span class="span_read">已读</span>
+							</li>
+							<li>
+								<span class="span_id">002</span>
+								<span class="span_name">22222222@simope.com</span>
+								<span class="span_status">欠费</span>
+								<span class="span_read span_noread">未读</span> <!--默认黑色，未读红色标注span_noread-->
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>			
+	</div>
+</div>
+
+
+</body>
+</html>
