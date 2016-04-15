@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>去重复项</title>
+		<script src="js/jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		
+<ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>2</li>
+        <li>4</li>0
+        <li>3</li>
+    </ul>
+    
+    <ul class="ww">
+	    <li><span class="span_id">001</span></li>
+	    <li><span class="span_id">002</span></li>
+	    <li><span class="span_id">003</span></li>
+	    <li><span class="span_id">004</span></li>
+	    <li><span class="span_id">005</span></li>
+	    <li><span class="span_id">005</span></li>
+	</ul>
+	
+	<ul class="check">
+	    <li><span><input type="checkbox" name="" id="" value="1" /></span><span class="span_id">001</span></li>
+	    <li><span><input type="checkbox" name="" id="" value="2" /></span><span class="span_id">002</span></li>
+	    <li><span><input type="checkbox" name="" id="" value="7" /></span><span class="span_id">002</span></li>
+	    <li><span><input type="checkbox" name="" id="" value="3" /></span><span class="span_id">003</span></li>
+	    <li><span><input type="checkbox" name="" id="" value="4" /></span><span class="span_id">004</span></li>
+	    <li><span><input type="checkbox" name="" id="" value="5" /></span><span class="span_id">005</span></li>
+	    <li><span><input type="checkbox" name="" id="" value="5" /></span><span class="span_id">005</span></li>
+	    <li><span><input type="checkbox" name="" id="" value="5" /></span><span class="span_id">005</span></li>
+	    <li><span><input type="checkbox" name="" id="" value="5" /></span><span class="span_id">005</span></li>
+	</ul>
+	<button>点击点击</button>
+	<script type="text/javascript">
+		$("button").click(function() {
+	        $(".check li span input").each(function() {
+	            var val = $(this).val();
+	            if($(".check li span input[value='" + val + "']").length > 1 ){
+	            	alert(3333333);
+	            	 $(".check li span input[value='" + val + "']:gt(0)").parent().parent().remove();
+	            }    
+	        });
+    	});
+	</script>
+	
+	<select id="test">
+	    <option value="1">语文</option>
+	    <option value="2">数学</option>
+	    <option value="1">语文</option>    
+	    <option value="2">数学</option>
+	    <option value="3">英语</option>
+	    <option value="2">数学</option>
+	</select>
+	<input type="button" value="删除重复项">
+	<script type="text/javascript">
+		/*根据value值判断*/
+		$(function(){
+	    $(":button").click(function() {
+	        $("#test option").each(function() {
+	            var val = $(this).val();
+	            if ( $("#test option[value='" + val + "']").length > 1 )
+	                $("#test option[value='" + val + "']:gt(0)").remove();
+	        });
+	    });
+	});
+	</script>
+
+	
+   <script type="text/javascript">
+   /*根据元素值判断*/
+   	var temp = '';
+    $(function(){
+        $('ul.ww>li>span').each(function(){
+            if(temp.indexOf($(this).html())!=-1)
+                $(this).parent().remove();
+           /* temp += $(this).html();*/
+        })
+    })
+
+   </script>
+	</body>
+</html>
