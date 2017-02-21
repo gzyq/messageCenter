@@ -1,0 +1,210 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: Microsoft Yahei, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+	overflow: hidden;
+}
+a,a:link,.a:visited {
+	text-decoration: none;
+	color: #333;
+}
+/*消息中心列表*/
+p.p_title{
+	height: 49px;
+	line-height: 49px;
+	font-size: 18px;
+	padding-left: 30px;
+	background: #F1F4FB;
+	border-bottom: solid 1px #D0D0D0;
+}
+.mCenter_top{
+	height: 47px;
+	padding-top: 13px;
+	padding-left: 75px;
+	background: #fff;
+}
+.div_sum{
+	height: 32px;
+	line-height: 32px;
+	float: right;
+	margin-right: 40px;
+}
+.btn_delete{
+	width: 93px;
+	height: 34px;
+	float: left;
+	border-radius: 2px;
+	padding-left: 23px;
+	border: solid 1px #8483A5;
+	background: #FFF;
+	cursor: pointer;
+	background: url(../images/mas_del.png) no-repeat 6px 5px;
+}
+.span_unread{
+	padding: 3px;
+	color: #EA3E3C;
+}
+.mCenter_head{
+	height: 20px;
+	line-height: 20px;
+	padding-top: 15px;
+    padding-bottom: 15px;
+    background: #F1F4FB;
+    font-size: 0;
+}
+.mCenter_head span,.mCenter_cont span{ 
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	font-family: Microsoft Yahei, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.mCenter_head i{
+	padding-right: 3px;
+	font-style: normal;
+}
+.span_check{
+	width: 5%;
+	width: 75px;
+	text-align: center;
+	margin-top: 4px;
+	vertical-align: top;
+}
+.span_status{
+	width: 3%;
+	width: 48px;
+}
+.mas_unread{
+	background: url(../images/mas_unread.png) no-repeat;
+}
+.mas_read{
+	background: url(../images/mas_read.png) no-repeat;
+}
+.span_theme{
+	width: 60%;
+	padding-right: 10px;
+	cursor: pointer;
+}
+.span_theme>p:first-child{
+	font-weight: bold;
+	padding-bottom: 4px;
+}
+.span_sendtime{
+	width: 16%;
+}
+.span_btn_del{
+	/*width: 8%;*/	
+}
+.span_btn_del>button{
+	width: 72px;
+	height: 32px;
+	padding-left: 18px;
+	border-radius: 2px;
+	border: solid 1px #8483A5;
+	background: #FFF;
+	background: url(../images/mas_del.png) no-repeat 8px 4px;
+	display: none;
+}
+.mCenter_cont ul li{
+	list-style: none;
+	height: 50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 0;
+}
+.mCenter_cont ul li.massHasRead{
+	color:#9C9C9C;
+}
+.mCenter_cont ul li:nth-child(odd){
+	background: #FFFFFF;
+}
+.mCenter_cont ul li:nth-child(even){
+	background: #F1F4FB;
+}
+.mCenter_cont ul li span{
+	vertical-align:top;
+}
+.mCenter_cont ul li .span_status{
+	height: 21px;
+}
+.mCenter_cont ul li .span_theme p{
+	cursor: pointer;
+}
+.mCenter_cont ul li .span_sendtime{
+	padding-top: 15px;
+}
+.mCenter_cont ul li .span_btn_del{
+	padding-top:9px;
+}
+/*没有新消息*/
+.mCenter_contNull{
+	text-align: center;
+	padding: 40px;
+	display: none;
+}
+.mCenter_contNull span{
+	padding: 20px 54px;
+	background: url(../images/mas_null.png) no-repeat left center;
+}
+/*翻页*/
+.div_page{
+	padding-top: 17px;
+	padding-bottom: 80px;
+	padding-right: 20px;
+	background: #F1F4FB;
+}
+.div_page>p{
+	float: right;
+}
+
+/*消息详情*/
+.msgInfo{
+	height: 100px;
+	padding-left:30px;
+	background: #F0F4FB;
+	color: #C9CCD1;
+	border-bottom: solid 1px #D0D0D0;
+}
+.msgInfo>p{
+	height: 18px;
+	line-height: 18px;
+}
+.msgInfo>p.p_theme{
+	color: #000;
+    font-size: 18px;
+    padding-bottom: 20px;
+    padding-top: 26px;
+}
+.p_time>span{
+	display: block;
+	float: left;
+}
+.msgInfo>p>.span_delete{
+	width: 21px;
+	height: 21px;
+	display: block;
+	cursor: pointer;
+	background: url(../images/mas_del.png) no-repeat 0 -1px;
+}
+/*.msgInfo>p>.span_delete>img{
+	vertical-align: top;
+}*/
+.msgCont{
+	padding: 38px 30px;
+	font-family: Microsoft Yahei, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #000;
+}
+.mCenter_head:before,.mCenter_head:after,
+.mCenter_cont ul li:before,.mCenter_cont ul li:after
+{
+	content: "";
+	display: table;
+}
+.mCenter_head:after,.mCenter_cont ul li:after{
+	clear: both;
+}

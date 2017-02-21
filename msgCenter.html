@@ -1,0 +1,80 @@
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>消息中心</title>
+	<link rel="stylesheet" type="text/css" href="css/msgCenter.css"/>
+</head>
+<body>
+<div class="mCenter_wrap">
+	<p class="p_title">消息列表</p>
+	<div class="mCenter_top">
+		<button class="btn_delete">批量删除</button>
+		<div class="div_sum">
+			共<span class="span_sum">34</span>条消息，其中<span class="span_unread">2</span>条未读
+		</div>
+	</div>
+	<div class="mCenter_head">
+		<span class="span_check"><input type="checkbox" /></span>
+		<span class="span_status"></span>
+		<span class="span_theme"><i>|</i>主题</span>
+		<span class="span_sendtime"><i>|</i>时间</span>
+		<span class="span_btn_del"></span>
+	</div>
+	<!--消息列表-->
+	<div class="mCenter_cont">
+		<ul>
+			<li>
+				<span class="span_check"><input type="checkbox" /></span>
+				<span class="span_status mas_unread"></span>
+				<span class="span_theme">
+					<p>认证邮箱地址成功</p>                                           	                                                       
+					<p>尊敬的用户，您于11月2日18:09分成功认证邮箱</p> 
+				</span>
+				<span class="span_sendtime">2015/12/30</span>
+				<span class="span_btn_del"><button>删除</button></span>
+			</li>
+			<li class="massHasRead">
+				<span class="span_check"><input type="checkbox" /></span>
+				<span class="span_status mas_read"></span>
+				<span class="span_theme">
+					<p>认证邮箱地址成功</p>                                           	                                                       
+					<p>尊敬的用户，您于11月2日18:09分成功认证邮箱</p> 
+				</span>
+				<span class="span_sendtime">2015/12/30</span>
+				<span class="span_btn_del"><button>删除</button></span>
+			</li>
+			<li class="massHasRead">
+				<span class="span_check"><input type="checkbox" /></span>
+				<span class="span_status mas_read"></span>
+				<span class="span_theme">
+					<p>认证邮箱地址成功</p>                                           	                                                       
+					<p>尊敬的用户，您于11月2日18:09分成功认证邮箱</p> 
+				</span>
+				<span class="span_sendtime">2015/12/30</span>
+				<span class="span_btn_del"><button>删除</button></span>
+			</li>
+		</ul>
+	</div>
+	
+	<!--没有新消息-->
+	<div class="mCenter_contNull">
+		<span>没有新消息</span>
+	</div>
+	
+	<div class="div_page">
+		<p>共12页</p>
+	</div>
+</div>
+<script src="jquery-1.9.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	//删除
+	$(".mCenter_cont>ul>li").hover(function(){
+		$(this).find("button").show();
+	},function(){
+		$(this).find("button").hide();
+	});
+</script>
+	
+</body>
+</html>
